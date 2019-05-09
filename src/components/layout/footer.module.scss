@@ -1,0 +1,42 @@
+@import '../../shared.scss';
+
+.footer {
+    background: linear-gradient(darken($theme-main-color, 5%), $theme-main-color);
+    color: $white-color;
+    text-align: center;
+    padding: 1rem;
+}
+
+.navlist {    
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: auto;
+
+   li {
+       margin: 1rem;
+   }
+}
+
+.icon {
+    border-radius: 8px;
+    padding: 0.2rem;
+
+    &.fcc-icon {
+        color: $white-color;
+        background-color: #37a241;
+    }
+
+    &.codepen-icon {
+        color: #eee;
+        padding: 0.2rem;
+        background-color: #222;
+    }
+
+    &.fb-icon {
+        color: #3741a2;
+        border-radius: 0px;
+        padding: 0;
+        background-color: $white-color;
+    }
+}

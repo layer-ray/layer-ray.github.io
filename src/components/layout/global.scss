@@ -1,0 +1,40 @@
+@import '../../shared.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: $text-main-color;
+    font-family: 'Roboto', sans-serif;
+    background-color: $white-color;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:visited {
+        color: desaturate($link-color, 50%);
+    }
+
+    &:hover {
+        color: lighten($link-color, 20%);
+    }
+
+    &:active {
+        color: darken($link-color, 20%);
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
