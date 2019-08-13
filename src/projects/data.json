@@ -1,0 +1,14 @@
+{
+    "badge_thumb": {
+        "title": "QRBc - QR Badge creator",
+        "desc": "This simple application allow users to create and print badges with data codified in a qr code"
+    },
+    "json_csv_thumb": {
+        "title": "Json|Csv Converter",
+        "desc": "This tool do exactly what it is supposed to do: it converts files from json format to csv and viceversa"
+    },
+    "check_the_vote": {
+        "title": "Check the vote",
+        "desc": "This is a client used to interact with the data provided from a server created ad-hoc. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation"
+    }
+}

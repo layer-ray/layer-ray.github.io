@@ -12,7 +12,7 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`portfolio`, `gatsby`, `react`]} />
-      <Grid imgs={data.images.edges}/>
+      <Grid imgs={data.thumbs.edges}/>
     </Layout>
   );
 }
@@ -21,7 +21,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    images: allFile(
+    thumbs: allFile(
       sort: { fields: name, order: ASC }
     ) {
       edges {
