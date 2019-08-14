@@ -1,14 +1,26 @@
 {
     "badge_thumb": {
         "title": "QR Badge creator",
-        "desc": "This simple application allow users to create and print badges with data codified in a qr code"
+        "desc": "This simple application allow users to create and print badges with data codified in a qr code",
+        "repo": "https://github.com/layer-ray/badge-generator",
+        "live": "https://qr-badge-generator.herokuapp.com/"
     },
     "json_csv_thumb": {
         "title": "Json|Csv Converter",
-        "desc": "This tool do exactly what it is supposed to do: it converts files from json format to csv and viceversa"
+        "desc": "This tool do exactly what it is supposed to do: it converts files from json format to csv and viceversa",
+        "repo": "https://github.com/layer-ray/JsonCsvConverter",
+        "live": "https://json-csv-converter.herokuapp.com"
     },
     "check_the_vote": {
         "title": "Check the vote",
-        "desc": "This is a client used to interact with the data provided from a server created ad-hoc. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation"
+        "desc": "This is the client used to interact with the data provided from a server created ad-hoc. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation",
+        "repo": "https://github.com/layer-ray/mepVoteMapper_client",
+        "live": "https://check-the-vote.herokuapp.com/"
+    },    
+    "mep-vote-mapper": {
+        "title": "Mep Vote Mapper",
+        "desc": "This is a server that collect and update EU votations data and store them in a database, clean and organized",
+        "repo": "https://github.com/layer-ray/mepVoteMapper_client",
+        "live": "https://check-the-vote.herokuapp.com/"
     }
 }
