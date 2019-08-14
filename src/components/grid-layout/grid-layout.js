@@ -1,15 +1,17 @@
 import React from 'react';
-
+import {FaGithub} from 'react-icons/fa';
+import {DiHeroku} from 'react-icons/di';
 import Img from "gatsby-image"
 
 import gridStyle from './grid-layout.module.scss';
 
 import data from "../../projects/data.json";
 
-const defaultTitle = "Upcoming app!"
-const defaultDesc = `This will be my next application.`;
+const defaultTitle = "Upcoming app!";
+const defaultDesc = "This will be my next application.";
+const defaultLink = "layer-ray.github.io/link-do-not-exists";
 
-const Grid = ({imgs}) => {    
+const Grid = ({imgs}) => {
 
     // detect if device is touch. Credits to Riccardo Andreatta [CODEPEN]
     function is_touch_device() {
@@ -29,28 +31,50 @@ const Grid = ({imgs}) => {
     }
 
     return (
-    <div className={gridStyle.gridContainer} >
+        <div className={gridStyle.gridContainer} >
+            {imgs.map((image, idx) => {
+                const prj = data[image.node.name] || {};
                 const frameStyle = [gridStyle.frame, is_touch_device() ? gridStyle.touch : gridStyle.notTouch].join(" ");
                 return (<figure 
-                    key={idx} 
-                    tabIndex="0"
+                            key={idx} 
+                            tabIndex="0"
                             className={frameStyle}
-                >
-                <div className={gridStyle.overlay}>
-                    <h2 className={gridStyle.title}>{(data[image.node.name] && data[image.node.name].title) || defaultTitle}</h2>
-                    <p className={gridStyle.description}>{(data[image.node.name] && data[image.node.name].desc) || defaultDesc}</p>
-                </div>
-                    <Img 
-                        fluid={image.node.childImageSharp.fluid}
-                        className={gridStyle.gatsbyImage}
-                    />
-                </figure>)
+                        >
+                            <div className={gridStyle.overlay}>
+                                <h2 className={gridStyle.title}>{prj.title || defaultTitle}</h2>
+                                <p className={gridStyle.description}>
+                                    {prj.desc || defaultDesc}
+                                </p>
+                                <footer className={gridStyle.overlayFooter}>
+                                    <a
+                                        href={prj.live || defaultLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={gridStyle.btn}
+                                    >
+                                        <FaGithub />
+                                        <span> Repo </span>
+                                    </a>
+                                    <a 
+                                        href={prj.live || defaultLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={gridStyle.btn}
+                                    >
+                                        <DiHeroku />
+                                        <span> Live </span>
+                                    </a>
+                                </footer>
+                            </div>
+                            <Img 
+                                fluid={image.node.childImageSharp.fluid}
+                                className={gridStyle.gatsbyImage}
+                            />
+                        </figure>)
                         })
             }
         </div>
-            )
-        }
-    </div>)
-    };
+    )
+};
 
 export default Grid;
