@@ -11,16 +11,16 @@
         "repo": "https://github.com/layer-ray/JsonCsvConverter",
         "live": "https://json-csv-converter.herokuapp.com"
     },
-    "check_the_vote": {
+    "mep_vote_mapper_client": {
         "title": "Check the vote",
-        "desc": "This is the client used to interact with the data provided from a server created ad-hoc. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation",
+        "desc": "This is the client used to interact with the data provided from Mep Vote Mapper app. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation",
         "repo": "https://github.com/layer-ray/mepVoteMapper_client",
         "live": "https://check-the-vote.herokuapp.com/"
     },    
-    "mep-vote-mapper": {
+    "mep_vote_mapper": {
         "title": "Mep Vote Mapper",
-        "desc": "This is a server that collect and update EU votations data and store them in a database, clean and organized",
-        "repo": "https://github.com/layer-ray/mepVoteMapper_client",
-        "live": "https://check-the-vote.herokuapp.com/"
+        "desc": "This is a server that collect EU votations data and store them in a database, clean and organized. It allows also to manage data through a raw interface",
+        "repo": "https://github.com/layer-ray/mepVoteMapper",
+        "live": "https://mep-vote-mapper.herokuapp.com"
     }
 }
