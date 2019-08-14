@@ -20,7 +20,7 @@ const Grid = ({imgs}) => {
             return window.matchMedia(query).matches;
         }
     
-        if (('ontouchstart' in window) || (window.DocumentTouch && document instanceof window.DocumentTouch)) {
+        if (window && (('ontouchstart' in window) || (window.DocumentTouch && document instanceof window.DocumentTouch))) {
             return true;
         }
     
