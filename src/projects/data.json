@@ -2,25 +2,43 @@
     "badge_thumb": {
         "title": "QR Badge creator",
         "desc": "This simple application allow users to create and print badges with data codified in a qr code",
-        "repo": "https://github.com/layer-ray/badge-generator",
-        "live": "https://qr-badge-generator.herokuapp.com/"
+        "tech": ["react", "sass", "webpack"],
+        "repo": {"url": "https://github.com/layer-ray/badge-generator", "host": "github"},
+        "live": {"url":"https://qr-badge-generator.herokuapp.com/", "host": "heroku"}
     },
     "json_csv_thumb": {
         "title": "Json|Csv Converter",
         "desc": "This tool do exactly what it is supposed to do: it converts files from json format to csv and viceversa",
-        "repo": "https://github.com/layer-ray/JsonCsvConverter",
-        "live": "https://json-csv-converter.herokuapp.com"
+        "tech": ["html5", "vanilla_js", "vanilla_css", "webpack"],
+        "repo": {"url":"https://github.com/layer-ray/JsonCsvConverter", "host": "github"},
+        "live": {"url":"https://json-csv-converter.herokuapp.com", "host": "heroku"}
     },
     "mep_vote_mapper_client": {
         "title": "Check the vote",
-        "desc": "This is the client used to interact with the data provided from Mep Vote Mapper app. It collect data about EU Parliament's plenary votations and the client allow users to visualize what each mep voted for each votation",
-        "repo": "https://github.com/layer-ray/mepVoteMapper_client",
-        "live": "https://check-the-vote.herokuapp.com/"
+        "desc": "This is the client used to interact with the data provided from Mep Vote Mapper server. it allow users to visualize what each mep voted for each votation",
+        "tech": ["react", "redux", "sass", "webpack"],
+        "repo": {"url":"https://github.com/layer-ray/mepVoteMapper_client", "host":"github"},
+        "live": {"url": "https://check-the-vote.herokuapp.com/", "host": "heroku"}
     },    
     "mep_vote_mapper": {
         "title": "Mep Vote Mapper",
-        "desc": "This is a server that collect EU votations data and store them in a database, clean and organized. It allows also to manage data through a raw interface",
-        "repo": "https://github.com/layer-ray/mepVoteMapper",
-        "live": "https://mep-vote-mapper.herokuapp.com"
+        "desc": "This is a server that collect data about EU Parliament's plenary votations and, once clean and organized, store them in a database. It also allows to manage data through a raw interface",
+        "tech": ["html5", "vanilla_js", "node", "mongo"],
+        "repo": {"url":"https://github.com/layer-ray/mepVoteMapper", "host": "github"},
+        "live": {"url":"https://mep-vote-mapper.herokuapp.com", "host": "heroku"}
+    },
+    "meteor_landing": {
+        "title": "Meteor Landing map",
+        "desc": "A data viz project (part of FCC curriculum) that displays data about biggest meteorite impacts on earth",
+        "tech": ["d3", "vanilla_css"],
+        "repo": {"url":"https://codepen.io/LoneKodiak/pen/ZxrPOy?editors=0110", "host": "codepen"},
+        "live": {"url":"https://codepen.io/LoneKodiak/full/ZxrPOy", "host": "codepen"}
+    },
+    "global_surface_temp": {
+        "title": "Global Surface Variation",
+        "desc": "A data viz project (part of FCC curriculum) that squeeze a lot of data about earth land-surface historical temperature in a very compact and intuitive view",
+        "tech": ["d3", "vanilla_css"],
+        "repo": {"url":"https://codepen.io/LoneKodiak/pen/LdzbGg?editors=0110", "host": "codepen"},
+        "live": {"url":"https://codepen.io/LoneKodiak/full/LdzbGg", "host": "codepen"}
     }
 }
