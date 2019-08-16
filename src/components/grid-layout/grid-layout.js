@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import {FaGithub} from 'react-icons/fa';
-import {DiHeroku} from 'react-icons/di';
+
+import {IconContext} from 'react-icons';
+import {DiHeroku, DiMongodb, 
+        DiCodepen} from 'react-icons/di';
+import {FaGithub, FaHtml5, 
+        FaReact, FaSass, 
+        FaNodeJs, FaCss3Alt,
+        FaJs} from 'react-icons/fa';
+import {ReduxIconSvg, WebpackIconSvg, 
+        D3IconSvg} from '../svg-icons';
+
 import Img from "gatsby-image"
 
 import gridStyle from './grid-layout.module.scss';
@@ -49,25 +58,81 @@ const Grid = ({imgs}) => {
                                 </p>
                                 <p className={gridStyle.linkWrapper}>
                                     <a
-                                        href={prj.repo || defaultLink}
+                                        href={(prj.repo && prj.repo.url) || defaultLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={gridStyle.btn}
                                     >
-                                        <FaGithub />
+                                        {(() => {
+                                            switch(prj.repo && prj.repo.host){
+                                            case "github":
+                                                return <FaGithub />
+                                            case "codepen":
+                                                return <DiCodepen />
+                                            default:
+                                                return;
+                                        }})()}
                                         <span> Repo </span>
                                     </a>
                                     <a 
-                                        href={prj.live || defaultLink}
+                                        href={(prj.live && prj.live.url) || defaultLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={gridStyle.btn}
                                     >
-                                        <DiHeroku />
+                                        {(() => {
+                                            switch(prj.live && prj.live.host){
+                                            case "heroku":
+                                                return <DiHeroku />
+                                            case "codepen":
+                                                return <DiCodepen />
+                                            default:
+                                                return;
+                                        }})()}
                                         <span> Live </span>
                                     </a>
                                 </p>
                                 <footer className={gridStyle.overlayFooter} >
+                                    {prj.tech && prj.tech.map(tech => {
+                                        switch(tech){
+                                            case "html5":
+                                                return <IconContext.Provider value={{size: "2em", color: "#f14a29"}} >
+                                                            <FaHtml5 />
+                                                        </IconContext.Provider>;
+                                            case "vanilla_js":
+                                                return <IconContext.Provider value={{size: "2em", color: "#f5e342"}} >
+                                                            <FaJs />
+                                                        </IconContext.Provider>;
+                                            case "vanilla_css":
+                                                return <IconContext.Provider value={{size: "2em", color: "#2062af"}} >
+                                                            <FaCss3Alt />
+                                                        </IconContext.Provider>;
+                                            case "sass":
+                                                return <IconContext.Provider value={{size: "2em", color: "#cf649a"}} >
+                                                            <FaSass />
+                                                        </IconContext.Provider>;
+                                            case "react":
+                                                return <IconContext.Provider value={{size: "2em", color: "#61dafb"}} >
+                                                            <FaReact />
+                                                        </IconContext.Provider>;
+                                            case "node":
+                                                return <IconContext.Provider value={{size: "2em", color: "#8cc84b"}} >
+                                                            <FaNodeJs />
+                                                        </IconContext.Provider>;
+                                            case "mongo":
+                                                return <IconContext.Provider value={{size: "2em", color: "#61dafb"}} >
+                                                                <DiMongodb />
+                                                            </IconContext.Provider>;
+                                            case "redux":
+                                                return <ReduxIconSvg />
+                                            case "webpack":
+                                                return <WebpackIconSvg />
+                                            case "d3":
+                                                return <D3IconSvg />
+                                            default:
+                                                return <div>?</div>
+                                        };
+                                    })}
                                 </footer>
                             </div>
                             <Img 

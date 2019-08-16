@@ -1,16 +1,20 @@
 import React from 'react';
 
-import {FaFreeCodeCamp, FaCodepen, FaFacebook} from 'react-icons/fa';
+import {FaFreeCodeCamp, FaCodepen, FaFacebookSquare} from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 
 import footerStyles from './footer.module.scss';
 
 const SocialIcon = ({link, className, children}) => (
-      <a href={link}>
+      <a 
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <li>
           <IconContext.Provider value={{
               size: "2em",
-			  className,
+			        className,
               style: {
                 verticalAlign: "middle"
               }}}
@@ -29,22 +33,22 @@ const Footer = () => {
             <h2 className="hidden">Footer - social icons</h2>
             <ul className={footerStyles.navlist}>
               <SocialIcon 
-              link="www.freecodecamp.org" 
+              link="https://www.freecodecamp.org" 
               className={[footerStyles.fccIcon, footerStyles.icon].join(' ')}
               > 
                 <FaFreeCodeCamp />
               </SocialIcon>
               <SocialIcon 
-                link="www.codepen.org"   		
+                link="https://www.codepen.io"   		
                 className={[footerStyles.codepenIcon, footerStyles.icon].join(' ')}
               >
                 <FaCodepen />
               </SocialIcon>
               <SocialIcon 
-                link="www.facebook.com" 
+                link="https://www.facebook.com" 
                 className={[footerStyles.fbIcon, footerStyles.icon].join(' ')}
               >
-                <FaFacebook />
+                <FaFacebookSquare />
               </SocialIcon>
             </ul>
              Layer © {new Date().getFullYear()}
