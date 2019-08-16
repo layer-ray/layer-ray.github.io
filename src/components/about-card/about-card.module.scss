@@ -35,7 +35,7 @@ dd {
 @media(min-width: 600px) {
     dl {
         grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-
+        grid-column-gap: 2px;
         grid-auto-flow: column;
     }
     

@@ -47,7 +47,7 @@ const Grid = ({imgs}) => {
                                 <p className={gridStyle.description}>
                                     {prj.desc || defaultDesc}
                                 </p>
-                                <footer className={gridStyle.overlayFooter}>
+                                <p className={gridStyle.linkWrapper}>
                                     <a
                                         href={prj.repo || defaultLink}
                                         target="_blank"
@@ -66,6 +66,8 @@ const Grid = ({imgs}) => {
                                         <DiHeroku />
                                         <span> Live </span>
                                     </a>
+                                </p>
+                                <footer className={gridStyle.overlayFooter} >
                                 </footer>
                             </div>
                             <Img 

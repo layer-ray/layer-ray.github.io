@@ -41,7 +41,8 @@
     .description {
         background-color: $theme-main-color;
         color: $white-color;
-        height: 80%;
+        height: 65%;
+        overflow: auto;
         margin-top: 1rem;
         padding: 1.5rem;
     }
@@ -51,20 +52,6 @@
 
         transition: opacity 0.4s;
     }
-
-    /* &:focus,
-    &:hover {
-        box-shadow: 2px 2px 20px darken($theme-main-color, 40%);
-        transform: scale(1.05);
-
-        .overlay {
-            opacity: 0.9;
-            text-shadow: 1px 1px #777;
-        }
-        .gatsby-image {
-            opacity: 0.1;
-        }
-    } */
 }
 
 .touch:focus,
@@ -82,10 +69,17 @@
 }
 
 
-.overlayFooter {
+.linkWrapper {
     position: relative;
     text-align: center;
     bottom: 1rem;
+}
+
+.overlayFooter {
+    display: flex;
+    max-width: 60%;
+    margin: auto;
+    justify-content: space-around;
 }
 
 .btn {
