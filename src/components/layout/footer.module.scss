@@ -21,22 +21,21 @@
 .icon {
     border-radius: 8px;
     padding: 0.2rem;
+}
 
-    &.fcc-icon {
-        color: $white-color;
-        background-color: #37a241;
-    }
+.fcc-icon {
+    color: $white-color;
+    background-color: #37a241;
+}
 
-    &.codepen-icon {
-        color: #eee;
-        padding: 0.2rem;
-        background-color: #222;
-    }
+.codepen-icon {
+    color: #eee;
+    padding: 0.2rem;
+    background-color: #222;
+}
 
-    &.fb-icon {
-        color: #3741a2;
-        border-radius: 0px;
-        padding: 0;
-        background-color: $white-color;
-    }
+.github-icon {
+    color: $white-color;
+    padding: 0;
+    background-color: #333;        
 }
